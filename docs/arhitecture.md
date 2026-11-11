@@ -7,7 +7,7 @@ Sistem **SKInstructor** je zgrajen na porazdeljeni **arhitekturi mikrostoritev (
 * **Katalog učiteljev (`catalog-service`):** Upravlja profile učiteljev, njihove lokacije (smučišča), cene in jezike. Vsebuje lastno podatkovno bazo.
 * **Rezervacije in urniki (`booking-service`):** Skrbi za jedrno poslovno logiko, preverjanje razpoložljivosti terminov in ustvarjanje rezervacij. Vsebuje lastno bazo podatkov.
 * **Mock plačila (`payment-service`):** Zunanja simulacija plačilnega sistema (npr. Stripe/PayPal) za obdelavo transakcij. Deluje brez lastne baze podatkov.
-* **Ocene in mnenja (`review-service`):** Omogoča uporabnikom oddajo mnenj in ocen po opravljeni uri smučanja. Vsebuje lastno bazo podatkov.
+* **Notification (`notification-service`):** Pošilja sistemska obvestila in potrditve uporabnikom prek elektronske pošte ali SMS-sporočil.
 
 ## 3. Komunikacija med storitvami
 1. Uporabnik išče učitelje preko `catalog-service`.
@@ -18,4 +18,4 @@ Sistem **SKInstructor** je zgrajen na porazdeljeni **arhitekturi mikrostoritev (
 
 ## 4. Tehnološki sklad in zagon
 * Vse storitve so containerizirane in se skupaj zaženejo z orodjem **Docker Compose** (`docker-compose.yml` v korenski mapi repozitorija).
-```[cite: 2]
+```[cite: 2]    
